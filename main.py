@@ -80,7 +80,7 @@ message += POSTSCRIPT
 # Send mail
 msg = MIMEMultipart()
 msg["From"] = MY_EMAIL
-msg["To"] = RECIPIENTS[0]
+msg["To"] = RECIPIENTS
 msg["Subject"] = f"OTP gépjárműnyeremény sorsolás - {this_year} {this_month_hun}"
 msg.attach(MIMEText(message, "plain"))
 
