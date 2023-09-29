@@ -1,10 +1,26 @@
 import requests
 import smtplib
 from datetime import datetime, timedelta
-from data_sample import OTP_BOOK_DATA, RECIPIENTS, POSTSCRIPT, MY_EMAIL, APP_PASSWORD, URL, DATETIME_TRANSLATE
+from data_sample import OTP_BOOK_DATA, RECIPIENTS, POSTSCRIPT, MY_EMAIL, APP_PASSWORD
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import bs4
+
+URL = "https://www.otpbank.hu/portal/hu/Megtakaritas/ForintBetetek/Gepkocsinyeremeny"
+DATETIME_TRANSLATE = {
+    "January": "Január",
+    "February": "Február",
+    "March": "Március",
+    "April": "Április",
+    "May": "Márjus",
+    "June": "Június",
+    "July": "Július",
+    "August": "Augusztus",
+    "September": "Szeptember",
+    "October": "Október",
+    "November": "November",
+    "December": "December",
+}
 
 
 def get_data(URL):
@@ -29,9 +45,6 @@ def check_if_win(soup, OTP_BOOK_DATA, POSTSCRIPT, DATETIME_TRANSLATE, URL):
     actual_series = [item.split()[0] for item in actual_numbers]
     actual_number = [item.split()[1] for item in actual_numbers]
     actual_prize = [item.split()[2:] for item in actual_numbers]
-
-    # Check if we win
-
 
     # compose message (Hungarian)
     message = "Halihó,\n\n"
