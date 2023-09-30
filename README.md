@@ -1,4 +1,4 @@
-# OTP_gepjarmunyeremeny_bot
+# OTP_Car_Lottery
 
 This script check the OTP Car Lottery page, and notifies you via email about the result.
 
