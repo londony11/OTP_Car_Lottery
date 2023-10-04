@@ -9,8 +9,6 @@ This script check the OTP Car Lottery page, and notifies you via email about the
   - [Manual Execution](#manual-execution)
   - [Automated Execution](#automated-execution)
 - [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - Web scraping to retrieve lottery numbers from the following:
@@ -65,9 +63,3 @@ In `data_sample.py`, you can configure the following settings:
   - `number`: Number of the ticket
   - `value`: Value of the ticket
 - `POSTSCRIPT`: Postscript for the email message
-
-## Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow our Contributing Guidelines.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
